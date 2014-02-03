@@ -1,0 +1,19 @@
+<h1>Things to look at...</h1>
+<%= link_to "New product", new_product_path %>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Price</th>
+	</tr>
+
+	<% @products.each do |product| %>
+		<tr>
+			<td><%= product.name %></td>
+			<td><%= product.description %></td>
+			<td><%= product.price_in_cents %></td>
+			<td><%= link_to 'Show', product %></td>
+		</tr>
+	<% end %>
+</table>
