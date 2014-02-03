@@ -1,4 +1,6 @@
 Rainforest::Application.routes.draw do
+  get "users/new"
+  get "users/create"
   # get "products/index"
   # get "products/show"
   # get "products/new"
@@ -17,6 +19,7 @@ Rainforest::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :products
+    resources :users, :only => [:new, :create]
 
   # Example resource route with options:
   #   resources :products do
